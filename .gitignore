@@ -1,1 +1,4 @@
 venv
+/grpc_examples/
+.idea
+__pycache__
