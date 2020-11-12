@@ -67,5 +67,5 @@ $ python -m pip install grpcio-tools
 
 Generate gRPC service code from proto file.
 ```bash
-python -m grpc_tools.protoc --proto_path=../../protos --python_out=. --grpc_python_out=. ../../protos/helloworld.proto
+python -m grpc_tools.protoc --proto_path=./protos --python_out=./generated --grpc_python_out=./generated ./protos/echo.proto
 ```
