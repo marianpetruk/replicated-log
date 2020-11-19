@@ -1,0 +1,38 @@
+version: '3.8'
+
+networks:
+  default_net:
+
+services:
+  master:
+    container_name: master
+    #    hostname: 'master'
+    build:
+      context: ./
+      dockerfile: Dockerfile_master
+    ports:
+      - "9000:9000"
+    networks:
+      default_net:
+
+  secondary-1:
+    container_name: secondary-1
+    #    hostname: 'secondary-1'
+    build:
+      context: ./
+      dockerfile: Dockerfile_secondary
+    ports:
+      - "9001:9001"
+    networks:
+      default_net:
+
+  secondary-2:
+    container_name: secondary-2
+    #    hostname: 'secondary-2'
+    build:
+      context: ./
+      dockerfile: Dockerfile_secondary
+    ports:
+      - "9002:9001"
+    networks:
+      default_net:

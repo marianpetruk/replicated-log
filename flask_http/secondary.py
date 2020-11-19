@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 
-from flask.sec_views import SecondaryView
+from sec_views import SecondaryView
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
