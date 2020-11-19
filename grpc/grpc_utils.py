@@ -1,4 +1,5 @@
-from generated import echo_pb2_grpc, echo_pb2
+import echo_pb2
+import echo_pb2_grpc
 
 
 class Echoer(echo_pb2_grpc.EchoServicer):

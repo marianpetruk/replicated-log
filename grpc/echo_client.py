@@ -3,10 +3,8 @@ import logging
 
 import grpc
 
-from generated import echo_pb2
-from generated import echo_pb2_grpc
-
-from grpc_utils import Echoer
+import echo_pb2
+import echo_pb2_grpc
 
 
 def run():

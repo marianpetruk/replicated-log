@@ -3,10 +3,9 @@ import logging
 
 import grpc
 
-from generated import echo_pb2
-from generated import echo_pb2_grpc
+import echo_pb2_grpc
 
-from grpc_utils import Echoer
+from grpc.grpc_utils import Echoer
 
 
 # def SayHello(self, request, context):
