@@ -1,7 +1,6 @@
 from sanic import Sanic
 from sanic.response import json
 
-
 lst = []
 app = Sanic("App Name")
 
