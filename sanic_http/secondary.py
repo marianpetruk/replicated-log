@@ -13,10 +13,11 @@ async def get(request):
 
 @app.route("/", methods=['POST'])
 async def post(request):
-    # time.sleep(5) # for testing sleepy secondary
+    # await asyncio.sleep(25) # for testing sleepy secondary
+    # time.sleep(25) # for testing sleepy secondary
     rep_message = request.json.get("rep_message")
     lst.append(rep_message)
-    return json({'description': 'Replication Success'}, status=201)
+    return json({'description': 'Replication Success', 'status_code': 201}, status=201)
 
 
 if __name__ == "__main__":
