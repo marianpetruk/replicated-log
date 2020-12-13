@@ -1,5 +1,6 @@
 from sanic import Sanic
 from sanic.response import json
+import asyncio
 
 lst = []
 app = Sanic("App Name")
@@ -12,11 +13,11 @@ async def get(request):
 
 @app.route("/", methods=['POST'])
 async def post(request):
-    # await asyncio.sleep(25) # for testing sleepy secondary
+    await asyncio.sleep(10)  # TODO: for testing sleepy secondary
     # time.sleep(25) # for testing sleepy secondary
     rep_message = request.json.get("rep_message")
     lst.append(rep_message)
-    return json({'description': 'Replication Success', 'status_code': 201}, status=201)
+    return json({'description': 'Replication Success', 'status_code': 201}, status=201)  # TODO: fix double status code
 
 
 if __name__ == "__main__":
