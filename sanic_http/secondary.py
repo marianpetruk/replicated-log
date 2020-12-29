@@ -19,6 +19,12 @@ async def post(request):
     lst.append(rep_message)
     return json({'description': 'Replication Success', 'status_code': 201}, status=201)  # TODO: fix double status code
 
+@app.route('/health', methods=['GET'])
+async def healthcheck(request):
+    return json({"status": "OK"})
+
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=9001)
