@@ -4,7 +4,7 @@
 ```
 
 
-### for testing
+### for testing replicated log v.2
 
 Testing POST on master with write concerns: 1, 2, 3
 ```bash
