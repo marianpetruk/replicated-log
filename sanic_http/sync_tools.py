@@ -7,6 +7,7 @@ from greenlet import GreenletExit
 
 class CountDownLatch:
     def __init__(self, count=1):
+        self.k = False
         self.set_count(count)
         self.lock = threading.Condition(threading.Lock())
 
