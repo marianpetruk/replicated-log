@@ -2,11 +2,11 @@
 [Flask-HTTP](flask_http)
 
 
-## Replicated log v.2
+## Replicated log v.2 and v.3
 [Sanic-HTTP](sanic_http)
 
 ---
 
 #### Authors:
-- Anton Borkivskyy
+- Anton Borkivskyi
 - Marian Petruk
